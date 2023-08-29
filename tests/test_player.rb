@@ -4,7 +4,7 @@ require_relative '../lib/hand'
 
 class TestPlayer < Test::Unit::TestCase
   def setup
-    @player = Player.new(Hand.new)
+    @player = Player.new
   end
 
   def test_player_bank

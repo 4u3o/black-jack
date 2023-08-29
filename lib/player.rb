@@ -3,9 +3,9 @@ class Player
 
   BET_SIZE = 10
 
-  def initialize(hand)
+  def initialize
     @bank = 100
-    @hand = hand
+    @hand = Hand.new
   end
 
   def bet
