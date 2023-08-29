@@ -12,4 +12,8 @@ class Deck
   def pop
     cards.pop
   end
+
+  def hit(hand)
+    hand.cards << cards.pop
+  end
 end

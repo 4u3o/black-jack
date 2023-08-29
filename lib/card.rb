@@ -26,6 +26,10 @@ class Card
     "#{rank}#{SUITS[suit]}"
   end
 
+  def ace?
+    value == 1
+  end
+
   private
 
   attr_accessor :suit
