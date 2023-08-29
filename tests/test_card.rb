@@ -2,7 +2,6 @@ require 'test/unit'
 require_relative '../lib/card'
 
 class TestCard < Test::Unit::TestCase
-
   def test_that_king_is_10
     card = Card.new('K', :spade)
 
