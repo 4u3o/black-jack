@@ -33,7 +33,7 @@ class Game
   end
 
   def finish?
-    user.bank.zero? || dealer.bank.zero? || finish
+    user.bank.zero? || dealer.bank.zero? || finish || !deck.enough?
   end
 
   def refresh

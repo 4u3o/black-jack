@@ -1,6 +1,4 @@
-require 'test/unit'
-require_relative '../lib/card'
-require_relative '../lib/hand'
+require_relative 'test_helper'
 
 class TestHand < Test::Unit::TestCase
   def test_hand_value

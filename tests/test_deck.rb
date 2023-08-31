@@ -1,6 +1,4 @@
-require 'test/unit'
-require_relative '../lib/deck'
-require_relative '../lib/card'
+require_relative 'test_helper'
 
 class TestDeck < Test::Unit::TestCase
   def setup
@@ -38,7 +36,7 @@ class TestDeck < Test::Unit::TestCase
   def test_that_deck_pops_a_card
     before = @deck.cards.size
 
-    @deck.pop
+    @deck.send(:pop)
 
     assert_not_equal(before, @deck.cards.size)
     assert_equal(before, @deck.cards.size + 1)

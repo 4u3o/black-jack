@@ -1,4 +1,6 @@
 class Deck
+  MIN_CARDS_FOR_PLAY = 6
+
   def cards
     @cards ||= ('2'..'10').to_a.concat(['J', 'Q', 'K', 'A']).map do |rank|
       [:club, :diamond, :heart, :spade].map { |suit| [rank, suit] }
@@ -12,6 +14,10 @@ class Deck
 
   def hit(player)
     player.cards << cards.pop
+  end
+
+  def enough?
+    cards.size >= MIN_CARDS_FOR_PLAY
   end
 
   private

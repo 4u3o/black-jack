@@ -1,5 +1,4 @@
-require 'test/unit'
-require_relative '../lib/card'
+require_relative 'test_helper'
 
 class TestCard < Test::Unit::TestCase
   def test_that_king_is_10
