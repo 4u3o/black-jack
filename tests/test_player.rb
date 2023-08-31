@@ -1,6 +1,4 @@
-require 'test/unit'
-require_relative '../lib/player'
-require_relative '../lib/hand'
+require_relative 'test_helper'
 
 class TestPlayer < Test::Unit::TestCase
   def setup
