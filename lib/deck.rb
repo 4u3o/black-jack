@@ -7,13 +7,16 @@ class Deck
 
   def shuffle!
      cards.shuffle!
+     self
   end
+
+  def hit(player)
+    player.cards << cards.pop
+  end
+
+  private
 
   def pop
     cards.pop
-  end
-
-  def hit(hand)
-    hand.cards << cards.pop
   end
 end

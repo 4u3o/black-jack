@@ -1,11 +1,17 @@
 class Player
-  attr_reader :bank
+  extend Forwardable
+
+  attr_reader :bank, :name
+  def_delegators :@hand, :cards, :value, :bust?
+  def_delegator :@hand, :full?, :full_hand?
+  def_delegator :@hand, :clear, :clear_hand
 
   BET_SIZE = 10
 
-  def initialize
+  def initialize(name='Дилер')
     @bank = 100
     @hand = Hand.new
+    @name = name
   end
 
   def bet
@@ -13,7 +19,11 @@ class Player
     BET_SIZE
   end
 
-  private
+  def win(value)
+    self.bank += value
+  end
+
+  protected
 
   attr_writer :bank
 end
